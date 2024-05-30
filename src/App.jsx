@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AnimeHomePage from "./components/AnimeHomePage";
+import AnimeHomePage from "./components/AnimeHomePage/AnimeHomePage";
 
 function App() {
   return (
