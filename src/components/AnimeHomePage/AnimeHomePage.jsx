@@ -3,12 +3,15 @@ import axios from "axios";
 import SearchBar from "../SearchBar/SearchBar";
 import AnimeCharacterCard from "../AnimeCharacterCard/AnimeCharacterCard";
 import "./AnimeHomePage.css";
+import Loader from "../Loader/Loader";
 
 const AnimeHomePage = () => {
   const [animeData, setAnimeData] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredAnime, setFilteredAnime] = useState([]);
+  const [loader, setLoader] = useState(true);
+
 
   const AnimeURL = "https://api.jikan.moe/v4/characters";
 
@@ -18,8 +21,10 @@ const AnimeHomePage = () => {
         const response = await axios.get(AnimeURL);
         setAnimeData(response.data.data);
         setFilteredAnime(response.data.data);
+        setLoader(false);
       } catch (error) {
         console.error(error);
+        setLoader(false);
       }
     };
 
@@ -52,6 +57,10 @@ const AnimeHomePage = () => {
       setCurrentPage(currentPage - 1);
     }
   };
+
+  if(loader) {
+    return <Loader/>
+  }
 
   return (
     <div className="container">
