@@ -1,7 +1,7 @@
   .header {
       text-align: center;
       margin-bottom: 20px;
-      background-image: url('../assets/header_wallpaper.jpg');
+      background-image: url('../../assets/header_wallpaper.jpg');
       background-size: cover;
       background-position: bottom;
       padding: 120px 200px;
