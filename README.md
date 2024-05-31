@@ -21,12 +21,13 @@ This repository contains the source code and assets for an Anime Characters appl
 ![Loading Page](src/assets/Loader.png)
 *Description: The loading page appears while the app is fetching data or processing requests.*
 
+
 ### Mobile Page
 
-![Mobile Page](src/assets/HomaePage_Mobile.png)
+![Mobile Page](src/assets/HomePage_Mobile.png)
 *Description: The mobile view of the application allows users to access and interact with the features seamlessly on mobile devices.*
 
 ## Credits
 
-This project was created by Ayush Patel.
+**This project was created by Ayush Patel.**
 
